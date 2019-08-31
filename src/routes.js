@@ -27,6 +27,9 @@ import Wizard from "views/forms/Wizard.jsx";
 import AddDoctor from "./views/components/AddDoctor";
 import ModifyDoctor from "./views/components/ModifyDoctor";
 import DeleteDoctor from "./views/components/DeleteDoctor";
+import AddPatient from "./views/components/AddPatient";
+import ModifyPatient from "./views/components/ModifyPatient";
+import RemovePatient from "./views/components/RemovePatient";
 
 const routes = [
   {
@@ -110,38 +113,31 @@ const routes = [
   },
   {
     collapse: true,
-    name: "Forms",
-    icon: "nc-icon nc-ruler-pencil",
+    name: "Patient",
+    icon: "nc-icon nc-layout-11",
     state: "formsCollapse",
     views: [
       {
-        path: "/regular-forms",
-        name: "Regular Forms",
-        mini: "RF",
-        component: RegularForms,
+        path: "/add-patient",
+        name: "Add Patient",
+        mini: "A",
+        component: AddPatient,
         layout: "/admin"
       },
       {
-        path: "/extended-forms",
-        name: "Extended Forms",
-        mini: "EF",
-        component: ExtendedForms,
+        path: "/modify-patient",
+        name: "Modify Patient",
+        mini: "M",
+        component: ModifyPatient,
         layout: "/admin"
       },
       {
-        path: "/validation-forms",
-        name: "Validation Forms",
-        mini: "VF",
-        component: ValidationForms,
+        path: "/remove-patient",
+        name: "Remove Patient",
+        mini: "R",
+        component: RemovePatient,
         layout: "/admin"
       },
-      {
-        path: "/wizard",
-        name: "Wizard",
-        mini: "W",
-        component: Wizard,
-        layout: "/admin"
-      }
     ]
   },
   {
