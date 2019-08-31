@@ -1,0 +1,28 @@
+body{
+    direction: rtl;
+}
+.sidebar, .off-canvas-sidebar{
+    right: 0;
+    left: auto;
+}
+.main-panel{
+    float: left;
+}
+a {
+    text-align: right;
+}
+
+.card .card-footer .stats i{
+    margin-left: 9px;
+    margin-right: 0;
+}
+
+.nav {
+    padding-right: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    text-align: right;
+}
+.card-body {
+    direction: ltr;
+}
