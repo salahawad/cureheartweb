@@ -24,6 +24,9 @@ import ValidationForms from "views/forms/ValidationForms.jsx";
 import VectorMap from "views/maps/VectorMap.jsx";
 import Widgets from "views/Widgets.jsx";
 import Wizard from "views/forms/Wizard.jsx";
+import AddDoctor from "./views/components/AddDoctor";
+import ModifyDoctor from "./views/components/ModifyDoctor";
+import DeleteDoctor from "./views/components/DeleteDoctor";
 
 const routes = [
   {
@@ -73,65 +76,37 @@ const routes = [
         mini: "UP",
         component: UserProfile,
         layout: "/admin"
-      }
+      },
     ]
   },
   {
     collapse: true,
-    name: "Components",
+    name: "Doctor",
     icon: "nc-icon nc-layout-11",
     state: "componentsCollapse",
     views: [
       {
-        path: "/buttons",
-        name: "Buttons",
-        mini: "B",
-        component: Buttons,
+        path: "/add-doctor",
+        name: "Add Doctor",
+        mini: "A",
+        component: AddDoctor,
         layout: "/admin"
       },
       {
-        path: "/grid-system",
-        name: "Grid System",
-        mini: "GS",
-        component: GridSystem,
+        path: "/modify-doctor",
+        name: "Modify Doctor",
+        mini: "M",
+        component: ModifyDoctor,
         layout: "/admin"
       },
       {
-        path: "/panels",
-        name: "Panels",
-        mini: "P",
-        component: Panels,
+        path: "/remove-doctor",
+        name: "Remove Doctor",
+        mini: "R",
+        component: DeleteDoctor,
         layout: "/admin"
       },
-      {
-        path: "/sweet-alert",
-        name: "Sweet Alert",
-        mini: "SA",
-        component: SweetAlert,
-        layout: "/admin"
-      },
-      {
-        path: "/notifications",
-        name: "Notifications",
-        mini: "N",
-        component: Notifications,
-        layout: "/admin"
-      },
-      {
-        path: "/icons",
-        name: "Icons",
-        mini: "I",
-        component: Icons,
-        layout: "/admin"
-      },
-      {
-        path: "/typography",
-        name: "Typography",
-        mini: "T",
-        component: Typography,
-        layout: "/admin"
-      }
-    ]
+     ]
   },
   {
     collapse: true,
